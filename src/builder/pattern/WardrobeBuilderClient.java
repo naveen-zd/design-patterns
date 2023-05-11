@@ -8,7 +8,7 @@ public class WardrobeBuilderClient {
 		
 		Wardrobe w3 = new WardrobeBuilder().setColor("Ivory").setDoors(4).setMaterial("Teeak").getWardrobe();
 		
-		String URL = "http://abc.com/create/3"
+		String URL = "http://abc.com/create/3";
 
 	}
 }

@@ -8,9 +8,11 @@ public class BookShop implements Cloneable{
 	
 	private String shopName;
 	List<Book> books = new ArrayList<Book>();
+	private Address address;
 	
 	public BookShop(String name) {
 		this.shopName = name;
+		address = new Address();
 		//loadData();
 		
 	}
@@ -31,9 +33,13 @@ public class BookShop implements Cloneable{
 		}
 	}
 	
+	public void setAddress(String b) {
+		this.address.setBuilding(b);
+		
+	}
 	@Override
 	public String toString() {
-		return "BookShop [shopName=" + shopName + ", books=" + books + "]";
+		return "BookShop [shopName=" + shopName + ", books=" + books + "]" + address;
 	}
 
 	@Override
@@ -43,7 +49,8 @@ public class BookShop implements Cloneable{
 	   for(Book b : getBooks()) {
 		  bookShop.getBooks().add(b);
 		}
-		return bookShop;
+		//return bookShop;
+	   return (BookShop)super.clone();
 	}
 	
 

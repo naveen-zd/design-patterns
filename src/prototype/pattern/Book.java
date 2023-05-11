@@ -28,6 +28,9 @@ public class Book {
 		return bookAuthor;
 	}
 
+	public void setName(String name) {
+		this.bookName = name;
+	}
 
 	@Override
 	public String toString() {
